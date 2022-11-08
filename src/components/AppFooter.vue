@@ -164,7 +164,7 @@ footer {
     height: 100%;
 
     .footer-links {
-      padding: 1em;
+      padding: 1.5em;
       height: 100%;
       width: 45%;
       gap: 1em;
@@ -174,7 +174,7 @@ footer {
       flex-wrap: wrap;
 
       .column {
-        width: calc(100% / 3 - 1.5em);
+        width: calc(100% / 3 - 1em);
         @include my-flex(column, flex-start);
         align-items: flex-start;
         gap: 0.5em;
