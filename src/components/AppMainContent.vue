@@ -27,7 +27,7 @@ main {
 
   .main-container {
     @include my-container;
-    border: 1px solid white;
+
     height: 100%;
     div {
       @include my-flex(row, center);

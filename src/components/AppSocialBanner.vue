@@ -1,6 +1,6 @@
 <script>
 export default {
-  name: "AppHeader",
+  name: "AppSocialBanner",
   data() {
     return {};
   },
@@ -44,7 +44,7 @@ div {
   .container {
     @include my-container;
     height: 80px;
-    border: 1px solid green;
+
     @include my-flex(row, space-between);
     button {
       color: white;

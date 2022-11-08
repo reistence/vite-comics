@@ -124,23 +124,31 @@ export default {
         <div class="column">
           <span>DC COMICS</span>
           <ul>
-            <li v-for="item in dcComics">{{ item.name }}</li>
+            <li v-for="item in dcComics">
+              <a href="">{{ item.name }}</a>
+            </li>
           </ul>
           <span>SHOP</span>
           <ul>
-            <li v-for="item in shop">{{ item.name }}</li>
+            <li v-for="item in shop">
+              <a href="">{{ item.name }}</a>
+            </li>
           </ul>
         </div>
         <div class="column">
           <span>DC</span>
           <ul>
-            <li v-for="item in dc">{{ item.name }}</li>
+            <li v-for="item in dc">
+              <a href="">{{ item.name }}</a>
+            </li>
           </ul>
         </div>
         <div class="column">
           <span>SITES</span>
           <ul>
-            <li v-for="item in sites">{{ item.name }}</li>
+            <li v-for="item in sites">
+              <a href="">{{ item.name }}</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -175,6 +183,7 @@ footer {
 
       .column {
         width: calc(100% / 3 - 1em);
+
         @include my-flex(column, flex-start);
         align-items: flex-start;
         gap: 0.5em;
@@ -186,7 +195,7 @@ footer {
           li {
             font-size: 0.8rem;
             color: grey;
-            font-weight: 100;
+            font-weight: 200;
           }
         }
       }
@@ -201,8 +210,8 @@ footer {
     .footer-logo {
       background-image: url("../assets/img/dc-logo-bg.png");
       background-clip: border-box;
-      width: 50%;
-      height: 100%;
+      width: 500px;
+      height: 300px;
       background-clip: content-box;
       background-size: 100%;
       background-repeat: no-repeat;

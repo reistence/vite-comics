@@ -66,7 +66,6 @@ export default {
   .footer-banner-container {
     height: 150px;
     @include my-container;
-    border: 1px solid red;
 
     ul {
       height: 100%;

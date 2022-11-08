@@ -3,7 +3,7 @@ import AppHeader from "./components/AppHeader.vue";
 import AppMainContent from "./components/AppMainContent.vue";
 import FooterBanner from "./components/FooterBanner.vue";
 import AppFooter from "./components/AppFooter.vue";
-import AppSocial from "./components/AppSocial.vue";
+import AppSocialBanner from "./components/AppSocialBanner.vue";
 
 export default {
   components: {
@@ -11,7 +11,7 @@ export default {
     AppMainContent,
     FooterBanner,
     AppFooter,
-    AppSocial,
+    AppSocialBanner,
   },
 };
 </script>
@@ -21,7 +21,7 @@ export default {
   <AppMainContent></AppMainContent>
   <FooterBanner></FooterBanner>
   <AppFooter></AppFooter>
-  <AppSocial></AppSocial>
+  <AppSocialBanner></AppSocialBanner>
 </template>
 
 <style lang="scss">
