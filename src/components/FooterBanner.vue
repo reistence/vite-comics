@@ -23,7 +23,7 @@ export default {
     <div class="footer-banner-container">
       <ul>
         <li v-for="item in items">
-          <img src="`{{item.img}}`" :alt="item.name" />
+          <img :src="item.img" :alt="item.name" />
           <a href="">{{ item.name }}</a>
         </li>
       </ul>
