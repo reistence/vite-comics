@@ -18,6 +18,7 @@ export default {
   <AppHeader></AppHeader>
   <AppMainContent></AppMainContent>
   <FooterBanner></FooterBanner>
+  <AppFooter></AppFooter>
 </template>
 
 <style lang="scss">

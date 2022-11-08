@@ -6,14 +6,32 @@ export default {
       items: [
         {
           name: "DIGITAL COMICS",
-          img: "../asset/img/buy-comics-digital-comics.png",
+          //   img: "../asset/img/buy-comics-digital-comics.png",
+          img: "buy-comics-digital-comics.png",
         },
         {
           name: "DC MERCHANDISE",
-          img: "./asset/img/buy-comics-merchandise.png",
+          img: "buy-comics-merchandise.png",
+        },
+        {
+          name: "SUBSCRIPTION",
+          img: "buy-comics-subscriptions.png",
+        },
+        {
+          name: "COMIC SHOP LOCATOR",
+          img: "buy-comics-shop-locator.png",
+        },
+        {
+          name: "DC POWER VISA",
+          img: "buy-dc-power-visa.svg",
         },
       ],
     };
+  },
+  methods: {
+    getImgPath(imgPath) {
+      return new URL(imgPath, import.meta.url).href;
+    },
   },
 };
 </script>
@@ -23,7 +41,12 @@ export default {
     <div class="footer-banner-container">
       <ul>
         <li v-for="item in items">
-          <img :src="item.img" :alt="item.name" />
+          <div>
+            <img
+              :src="getImgPath(`../assets/img/${item.img}`)"
+              :alt="item.name"
+            />
+          </div>
           <a href="">{{ item.name }}</a>
         </li>
       </ul>
@@ -44,6 +67,28 @@ export default {
     height: 150px;
     @include my-container;
     border: 1px solid red;
+
+    ul {
+      height: 100%;
+      @include my-flex(row, space-around);
+
+      li {
+        @include my-flex(row, space-between);
+        gap: 0.4em;
+        div {
+          width: 40px;
+        }
+
+        img {
+          object-fit: contain;
+        }
+        a {
+          font-size: 0.8rem;
+          color: white;
+          min-width: max-content;
+        }
+      }
+    }
   }
 }
 </style>
