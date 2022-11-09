@@ -56,6 +56,12 @@ export default {
   }
 }
 
+@media screen and (max-width: 660px) {
+  .card {
+    width: calc(100% / 3 - 1em);
+  }
+}
+
 @media screen and (max-width: 480px) {
   .card {
     width: calc(100% / 2 - 1em);
