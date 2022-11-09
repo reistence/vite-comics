@@ -4,12 +4,17 @@ export default {
   props: {
     imgSrc: String,
   },
+  methods: {
+    getImgPath(imgPath) {
+      return new URL(imgPath, import.meta.url).href;
+    },
+  },
 };
 </script>
 
 <template>
   <div class="container-fluid">
-    <img :src="imgSrc" alt="" />
+    <img :src="getImgPath(`../assets/img/${imgSrc}`)" alt="" />
   </div>
 </template>
 
@@ -19,5 +24,8 @@ export default {
 
 .container-fluid {
   width: 100%;
+  img {
+    display: block;
+  }
 }
 </style>

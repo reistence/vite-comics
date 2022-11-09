@@ -17,12 +17,17 @@ export default {
     AppSocialBanner,
     Jumbotron,
   },
+  // methods: {
+  //   getImgPath(imgPath) {
+  //     return new URL(imgPath, import.meta.url).href;
+  //   },
+  // },
 };
 </script>
 
 <template>
   <AppHeader></AppHeader>
-  <Jumbotron :imgSrc="`./assets/img/jumbotron.jpg`"></Jumbotron>
+  <Jumbotron :imgSrc="`jumbotron.jpg`"></Jumbotron>
   <AppMainContent></AppMainContent>
   <FooterBanner></FooterBanner>
   <AppFooter></AppFooter>
