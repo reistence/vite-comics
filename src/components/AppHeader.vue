@@ -179,7 +179,7 @@ header {
   }
 }
 
-@media screen and (max-width: 780px) {
+@media screen and (max-width: 880px) {
   header {
     .header-container {
       .ham-menu {

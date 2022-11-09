@@ -58,6 +58,20 @@ div {
         border: 2px solid white;
       }
     }
+
+    @media screen and (max-width: 780px) {
+      button {
+        padding: 0.5em;
+        margin-right: 0.4em;
+      }
+    }
+    @media screen and (max-width: 480px) {
+      button {
+        padding: 0.3em;
+        margin-right: 0.4em;
+      }
+    }
+
     ul {
       @include my-flex(row, space-around);
       gap: 1em;

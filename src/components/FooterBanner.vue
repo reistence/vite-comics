@@ -90,6 +90,17 @@ export default {
           color: white;
           min-width: max-content;
         }
+        @media screen and (max-width: 780px) {
+          a {
+            display: none;
+          }
+        }
+
+        @media screen and (max-width: 480px) {
+          a {
+            display: none;
+          }
+        }
       }
     }
   }

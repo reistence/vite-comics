@@ -46,7 +46,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 530px) {
     .div {
       height: 100%;
     }
