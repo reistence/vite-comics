@@ -137,6 +137,7 @@ main {
       padding: 0.5em 1em;
       background-color: $blue;
       color: white;
+      font-weight: bold;
     }
     .wrapper {
       @include my-flex(row, space-between);
@@ -156,6 +157,7 @@ main {
       border: none;
       display: block;
       color: white;
+      font-weight: bold;
     }
   }
 }

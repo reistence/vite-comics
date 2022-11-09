@@ -51,6 +51,12 @@ div {
       border: 2px solid $blue;
       background-color: rgb(49, 46, 46);
       padding: 1em;
+      transition: 300ms;
+
+      &:hover {
+        background-color: $blue;
+        border: 2px solid white;
+      }
     }
     ul {
       @include my-flex(row, space-around);

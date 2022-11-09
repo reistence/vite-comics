@@ -28,6 +28,11 @@ export default {
 
   @include my-flex(column, space-between);
   gap: 0.5em;
+  transition: 300ms;
+
+  &:hover {
+    transform: scale(1.08);
+  }
 
   .card-img {
     width: 100%;
@@ -39,7 +44,7 @@ export default {
   .card-txt {
     p {
       color: white;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
     }
   }

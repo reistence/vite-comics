@@ -195,7 +195,12 @@ footer {
           li {
             font-size: 0.8rem;
             color: grey;
-            font-weight: 200;
+            font-weight: 300;
+            transition: 300ms;
+
+            &:hover {
+              color: white;
+            }
           }
         }
       }
