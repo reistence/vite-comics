@@ -14,7 +14,9 @@ export default {
 
 <template>
   <div class="container-fluid">
-    <img :src="getImgPath(`../assets/img/${imgSrc}`)" alt="" />
+    <div>
+      <img :src="getImgPath(`../assets/img/${imgSrc}`)" alt="" />
+    </div>
   </div>
 </template>
 
@@ -24,8 +26,16 @@ export default {
 
 .container-fluid {
   width: 100%;
-  img {
-    display: block;
+
+  div {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+
+    img {
+      display: block;
+      object-fit: fill;
+    }
   }
 }
 </style>

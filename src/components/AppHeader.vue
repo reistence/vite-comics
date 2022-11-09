@@ -103,7 +103,6 @@ header {
     ul {
       height: 100%;
       @include my-flex(row, space-around);
-      flex-wrap: wrap;
       gap: 1em;
       width: 60%;
 
