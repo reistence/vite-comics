@@ -49,4 +49,16 @@ export default {
     }
   }
 }
+
+@media screen and (max-width: 780px) {
+  .card {
+    width: calc(100% / 4 - 1em);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    width: calc(100% / 2 - 1em);
+  }
+}
 </style>

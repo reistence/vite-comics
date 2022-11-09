@@ -37,5 +37,23 @@ export default {
       object-fit: fill;
     }
   }
+  @media screen and (max-width: 780px) {
+    .div {
+      height: 100%;
+    }
+    img {
+      object-fit: cover !important;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .div {
+      height: 100%;
+    }
+    img {
+      object-fit: cover !important;
+      height: 100% !important;
+    }
+  }
 }
 </style>

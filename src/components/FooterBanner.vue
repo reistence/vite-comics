@@ -73,7 +73,9 @@ export default {
 
       li {
         @include my-flex(row, space-between);
+
         gap: 0.4em;
+        flex-wrap: wrap;
         div {
           width: 40px;
         }

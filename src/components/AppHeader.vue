@@ -66,6 +66,9 @@ export default {
       <div class="logo">
         <img src="../assets/img/dc-logo.png" alt="" />
       </div>
+      <div class="ham-menu">
+        <i class="fa-solid fa-bars"></i>
+      </div>
       <ul>
         <li
           :class="{ active: link.active }"
@@ -99,7 +102,9 @@ header {
         object-fit: cover;
       }
     }
-
+    .ham-menu {
+      display: none;
+    }
     ul {
       height: 100%;
       @include my-flex(row, space-around);
@@ -153,6 +158,24 @@ header {
         }
       }
     }
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .ham-menu {
+    display: block !important;
+  }
+  ul {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ham-menu {
+    display: block !important;
+  }
+  ul {
+    display: none !important;
   }
 }
 </style>
