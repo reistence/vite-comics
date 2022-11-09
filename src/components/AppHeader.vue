@@ -109,11 +109,46 @@ header {
         font-size: 0.8rem;
         font-weight: bold;
         line-height: 100px;
+        position: relative;
+
         &.active {
           color: $blue;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            height: 5px;
+            width: 100%;
+            background-color: $blue;
+          }
         }
         &:hover {
           color: $blue;
+          transition: all 300ms ease;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: 0%;
+            left: 0;
+            height: 5px;
+            width: 100%;
+            background-color: $blue;
+            animation: height 300ms ease;
+          }
+          @keyframes height {
+            0% {
+              height: 0px;
+            }
+            50% {
+              height: 3px;
+            }
+            100% {
+              height: 5px;
+            }
+          }
         }
       }
     }
