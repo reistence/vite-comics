@@ -112,7 +112,37 @@ export default {
           href: "/dc-power-visa",
         },
       ],
+      showLinks1: false,
+      showLinks2: false,
+      showLinks3: false,
+      showLinks4: false,
     };
+  },
+  methods: {
+    showLinkItem1() {
+      this.showLinks1 = !this.showLinks1;
+      this.showLinks2 = false;
+      this.showLinks3 = false;
+      this.showLinks4 = false;
+    },
+    showLinkItem2() {
+      this.showLinks2 = !this.showLinks2;
+      this.showLinks1 = false;
+      this.showLinks3 = false;
+      this.showLinks4 = false;
+    },
+    showLinkItem3() {
+      this.showLinks3 = !this.showLinks3;
+      this.showLinks1 = false;
+      this.showLinks2 = false;
+      this.showLinks4 = false;
+    },
+    showLinkItem4() {
+      this.showLinks4 = !this.showLinks4;
+      this.showLinks1 = false;
+      this.showLinks2 = false;
+      this.showLinks3 = false;
+    },
   },
 };
 </script>
@@ -122,30 +152,30 @@ export default {
     <div class="footer-container">
       <div class="footer-links">
         <div class="column">
-          <span>DC COMICS</span>
-          <ul>
+          <span @click="showLinkItem1">DC COMICS</span>
+          <ul id="list1" :class="showLinks1 === true ? 'active' : ''">
             <li v-for="item in dcComics">
               <a href="">{{ item.name }}</a>
             </li>
           </ul>
-          <span>SHOP</span>
-          <ul>
+          <span @click="showLinkItem2">SHOP</span>
+          <ul id="list2" :class="showLinks2 === true ? 'active' : ''">
             <li v-for="item in shop">
               <a href="">{{ item.name }}</a>
             </li>
           </ul>
         </div>
         <div class="column">
-          <span>DC</span>
-          <ul>
+          <span @click="showLinkItem3">DC</span>
+          <ul id="list3" :class="showLinks3 === true ? 'active' : ''">
             <li v-for="item in dc">
               <a href="">{{ item.name }}</a>
             </li>
           </ul>
         </div>
         <div class="column">
-          <span>SITES</span>
-          <ul>
+          <span @click="showLinkItem4">SITES</span>
+          <ul id="list4" :class="showLinks4 === true ? 'active' : ''">
             <li v-for="item in sites">
               <a href="">{{ item.name }}</a>
             </li>
@@ -221,6 +251,98 @@ footer {
       background-size: 100%;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+
+  @media screen and (max-width: 780px) {
+    .footer-container {
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .column {
+          ul {
+            position: absolute;
+            display: none;
+            gap: 0.5em;
+            top: 10px;
+            left: 100px;
+            width: max-content !important;
+            border-radius: 10px;
+
+            li {
+              color: black;
+              height: calc(100% / 5) !important;
+              &:hover {
+                color: $blue;
+              }
+            }
+
+            &.active {
+              background-color: rgba(250, 250, 250, 0.639) !important;
+              padding: 0.5em;
+              display: flex;
+
+              height: 250px !important;
+              flex-direction: column;
+            }
+          }
+
+          #list2 {
+            top: 10px;
+            height: 60px !important;
+          }
+          #list4 {
+            height: 130px !important;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .footer-container {
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        .column {
+          ul {
+            position: absolute;
+            display: none;
+            gap: 0.5em;
+            top: 10px;
+            left: 100px;
+            width: max-content !important;
+            border-radius: 10px;
+
+            li {
+              color: black;
+              height: calc(100% / 5) !important;
+              &:hover {
+                color: $blue;
+              }
+            }
+
+            &.active {
+              background-color: rgba(250, 250, 250, 0.639) !important;
+              padding: 0.5em;
+              display: flex;
+
+              height: 250px !important;
+              flex-direction: column;
+            }
+          }
+
+          #list2 {
+            top: 10px;
+            height: 60px !important;
+          }
+          #list4 {
+            height: 130px !important;
+          }
+        }
+      }
     }
   }
 }
